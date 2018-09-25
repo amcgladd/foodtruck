@@ -1,19 +1,134 @@
 <html>
-  <head>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </head>
-  <body>
-    <div class="nav">
-      <div class="nav-wrapper">
-        <div class="nav-burger">
-          <img src="assets/img/burger.png" alt="menu icon" width="100%">
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class=" center brand-logo">SQUEEZE</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Social</a></li>
+        <li><a href="#">Our Story</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Schedule</a></li>
+    <li><a href="#">Menu</a></li>
+    <li><a href="#">Social</a></li>
+    <li><a href="#">Our Story</a></li>
+  </ul>
+
+  <div class="welcome-box">
+    <img class="image" src="assets/img/head-burger.jpg" alt="pic of juicy burger">
+  </div>
+
+  <div class="schedule-box container">
+    <div class="row">
+      <div class="col s12 center-align" id="schedule-header">
+        <img src="assets/img/foodtruck.png" alt="pic of juicy burger">
+      </div>
+      <div class="col s12 m6">
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Today Nov 21</h5>
+          <p>Peterson Park</p>
         </div>
-        <div class="nav-logo">
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Tomorrow Nov 22</h5>
+          <p>Kofu Park</p>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Wed Nov 23</h5>
+          <p>Private Event</p>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.47618486849!2d-122.67958708372461!3d45.520622279101644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a06bbf002b9%3A0x1a5a314da13581e5!2sEpicodus!5e0!3m2!1sen!2sus!4v1537915037959" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-pic">
+    <img class="image" src="assets/img/menu.jpg" alt="pic of juicy burger">
+  </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+          <h1>Food</h1>
+        </div>
+        <div class="col s12 l4">
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Burger</h5>
+            <p>Item description</p>
+          </div>
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Cheese Burger</h5>
+            <p>Item description</p>
+          </div>
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Veggie Burger</h5>
+            <p>Item description</p>
+          </div>
+        </div>
+        <div class="col s12 l4">
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Cola</h5>
+            <p>Item description</p>
+          </div>
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Beer</h5>
+            <p>Item description</p>
+          </div>
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Milkshake</h5>
+            <p>Item description</p>
+          </div>
+        </div>
+        <div class="col s12 l4">
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Small Fries</h5>
+            <p>Item description</p>
+          </div>
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Large Fries</h5>
+            <p>Item description</p>
+          </div>
+          <div class="divider"></div>
+          <div class="section">
+            <h5>Onion Rings</h5>
+            <p>Item description</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="landing-image">
-    </div>
-  </body>
+
+
+
+
+
+</body>
 </html>

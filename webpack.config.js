@@ -40,18 +40,12 @@ module.exports = {
       },
 
       {
-            test: /\.html$/,
-            loader: 'html-srcsets-loader',
-            options: {
-                attrs: ['img:src', ':srcset'],
-                minimize: true,
-                caseSensitive: true,
-                removeAttributeQuotes:false,
-                minifyJS:false,
-                minifyCSS:false
-            },
-            exclude: ['./src/main/webapp/index.html']
-        },
+   test: /\.html$/,
+   loader: 'html-srcsets-loader',
+   options: {
+       attrs: ['img:src', ':srcset'],
+   },
+}
 
     ]
   },
