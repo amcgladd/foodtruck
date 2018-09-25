@@ -4,5 +4,17 @@ $primary-font-color: red;
 body {
   font: 100% $font-stack;
   color: $primary-font-color;
-  background-color: green;
+}
+
+
+.nav {
+  background-color: grey;
+  height: 90px;
+  .nav-wrapper{
+    padding: 20px;
+    img{
+      width: 40px;
+      height: auto;
+    }
+  }
 }
