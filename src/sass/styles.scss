@@ -1,6 +1,49 @@
+//mixins
+@mixin for-phone-only {
+  @media only screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav-mobile {
+  display: none;
+}
+
 nav {
+  .navmobile {
+  }
+  .nav-logo{
+    vertical-align: middle;
+    height: 100px;
+    width: auto;
+  }
+  @include for-phone-only {
+    .nav-mobile {
+      display: inline;
+      #nav-burger {
+        padding-top: 30px;
+        float: left;
+        vertical-align: middle;
+        height: 40px;
+      }
+    }
+    // border: 5px solid green;
+    ul {
+      display: none;
+    }
+    li {
+      // border: 5px solid green;
+    }
+  }
+  font-size: 1.5rem;
   background-color: black;
-  // height: 200px;
   .nav-wrapper{
     padding: 20px;
     text-align: center;
@@ -13,17 +56,15 @@ nav {
         text-decoration: none;
       }
       li{
+        margin-right: 50px;
         display: inline;
         color: white;
-        img{
-          vertical-align: middle;
-          height: 100px;
-          width: auto;
-        }
       }
     }
   }
 }
+
+
 
 #menu-burger {
     height: 80px;
@@ -46,12 +87,12 @@ nav {
   }
 }
 
-@media screen and (max-width: 950px) {
-  .welcome-box{
-    height: 500px;
-    align-items: center;
-  }
-}
+// @media screen and (max-width: 950px) {
+//   .welcome-box{
+//     height: 500px;
+//     align-items: center;
+//   }
+// }
 
 .schedule-box {
   margin-bottom: 50px;

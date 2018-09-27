@@ -4,21 +4,29 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-  <!-- materialize CDNs -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- materialize CDNs
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+
   <nav>
     <div class="nav-wrapper">
+      <div class="nav-mobile">
+          <img id="nav-burger" src="assets/img/menu.png" alt="menu icon">
+          <img class="nav-logo" src="assets/img/squeezeLogo.png" alt="logo">
+      </div>
+      <div class="nav-desktop">
       <ul>
         <li><a href="#">Schedule</a></li>
         <li><a href="#">Menu</a></li>
-        <li><img class="image" src="assets/img/squeezeLogo.png" alt="logo"></li>
+        <li><img class="nav-logo" src="assets/img/squeezeLogo.png" alt="logo"></li>
         <li><a href="#">Social</a></li>
         <li><a href="#">Our Story</a></li>
       </ul>
+    </div>
     </div>
   </nav>
 
@@ -27,7 +35,7 @@
     <img class="image" src="assets/img/head-burger.jpg" alt="pic of juicy burger">
   </div>
 
-  <div class="schedule-box container">
+  <div class="schedule-box">
     <div class="row">
       <div class="col s12 center-align" id="schedule-header">
         <img src="assets/img/foodtruck.png" alt="pic of juicy burger">
