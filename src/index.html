@@ -4,19 +4,22 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-  <!-- materialize CDNs
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-  <nav>
+  <div id="navbar">
     <div class="nav-wrapper">
       <div class="nav-mobile">
-          <img id="nav-burger" src="assets/img/menu.png" alt="menu icon">
-          <img class="nav-logo" src="assets/img/squeezeLogo.png" alt="logo">
+        <div id="nav-mobile-1">
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img id="nav-burger" src="assets/img/menu.png" alt="menu icon"></a>
+        </div>
+        <div id="nav-mobile-2">
+          <img id="nav-logo-mobile" src="assets/img/squeezeLogo.png" alt="logo">
+        </div>
       </div>
       <div class="nav-desktop">
       <ul>
@@ -28,11 +31,51 @@
       </ul>
     </div>
     </div>
-  </nav>
+  </div>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#">Schedule</a></li>
+    <li><a href="#">Menu</a></li>
+    <li><a href="#">Social</a></li>
+    <li><a href="#">Our Story</a></li>
+</ul>
 
 <main>
-  <div class="welcome-box">
+
+<!-- <div class="container">
+  <div class="row">
+
+  </div>
+  <div class="row">
+    <div class="column">
+
+    </div>
+    <div class="column">
+
+    </div>
+  </div>
+</div> -->
+
+
+  <!-- <div class="welcome-box">
     <img class="image" src="assets/img/head-burger.jpg" alt="pic of juicy burger">
+  </div> -->
+
+  <div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <img src="assets/img/head-burger.jpg" alt="pic of juicy burger">
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <img src="assets/img/head-burger.jpg" alt="pic of juicy burger">
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <img src="assets/img/head-burger.jpg" alt="pic of juicy burger">
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <img src="assets/img/head-burger.jpg" alt="pic of juicy burger">
+    </div>
   </div>
 
   <div class="schedule-box">
@@ -42,20 +85,40 @@
       </div>
       <div class="col s12 m6">
         <div class="divider"></div>
-        <div class="section">
-          <h5>Today Nov 21</h5>
-          <p>Peterson Park</p>
+        <div class="schedule-section">
+          <div class="schedule-date">
+            <div class="schedule-month">Nov</div>
+            <div class="schedule-day">21</div>
+          </div>
+          <div class="schedule-info">
+            <div>Peterson Park</div>
+            <div>11:00am- 3:00pm</div>
+          </div>
         </div>
         <div class="divider"></div>
-        <div class="section">
-          <h5>Tomorrow Nov 22</h5>
-          <p>Kofu Park</p>
+        <div class="schedule-section">
+          <div class="schedule-date">
+            <div class="schedule-month">Nov</div>
+            <div class="schedule-day">21</div>
+          </div>
+          <div class="schedule-info">
+            <div>Tomorrow Nov 22</div>
+            <div>Kofu Park</div>
+          </div>
         </div>
         <div class="divider"></div>
-        <div class="section">
-          <h5>Wed Nov 23</h5>
-          <p>Private Event</p>
+        <div class="schedule-section">
+          <div class="schedule-date">
+            <div class="schedule-month">Nov</div>
+            <div class="schedule-day">21</div>
+          </div>
+          <div class="schedule-info">
+            <div>Wed Nov 23</div>
+            <div>Private Event</div>
+          </div>
         </div>
+        <div class="divider"></div>
+
       </div>
       <div class="col s12 m6">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.47618486849!2d-122.67958708372461!3d45.520622279101644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a06bbf002b9%3A0x1a5a314da13581e5!2sEpicodus!5e0!3m2!1sen!2sus!4v1537915037959" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -72,61 +135,122 @@
         <div class="col s12 center-align">
           <h1>Food</h1>
         </div>
+
         <div class="col s12 l4">
           <div class="divider"></div>
-          <div class="section">
-            <h5>Burger</h5>
-            <p>Item description</p>
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
+
           <div class="divider"></div>
-          <div class="section">
-            <h5>Cheese Burger</h5>
-            <p>Item description</p>
+
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
+
           <div class="divider"></div>
-          <div class="section">
-            <h5>Veggie Burger</h5>
-            <p>Item description</p>
+
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
         </div>
+
         <div class="col s12 l4">
           <div class="divider"></div>
-          <div class="section">
-            <h5>Cola</h5>
-            <p>Item description</p>
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
+
           <div class="divider"></div>
-          <div class="section">
-            <h5>Beer</h5>
-            <p>Item description</p>
+
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
+
           <div class="divider"></div>
-          <div class="section">
-            <h5>Milkshake</h5>
-            <p>Item description</p>
+
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
         </div>
+
         <div class="col s12 l4">
           <div class="divider"></div>
-          <div class="section">
-            <h5>Small Fries</h5>
-            <p>Item description</p>
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
+
           <div class="divider"></div>
-          <div class="section">
-            <h5>Large Fries</h5>
-            <p>Item description</p>
+
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
+
           <div class="divider"></div>
-          <div class="section">
-            <h5>Onion Rings</h5>
-            <p>Item description</p>
+
+          <div class="menu-section">
+            <div class="menu-first-line">
+              <div class="menu-item">Burger</div>
+              <div class="menu-price">10</div>
+            </div>
+            <div class="menu-second-line">
+              <p>Item description</p>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
 
-<div class="social-bg">
+<!-- <div class="social-bg">
   <div class="social container">
     <div class="row">
       <div class="col s6 m4">
@@ -155,17 +279,45 @@
       </div>
     </div>
   </div>
+</div> -->
+<div class="flex-box-bg">
+<div class="flex-box container">
+  <div>
+    <img class="image" src="assets/img/insta1.png" alt="pic of juicy burger">
+  </div>
+  <div>
+    <img class="image" src="assets/img/insta2.png" alt="pic of juicy burger">
+  </div>
+  <div>
+    <img class="image" src="assets/img/insta3.png" alt="pic of juicy burger">
+  </div>
+  <div>
+    <img class="image" src="assets/img/insta4.png" alt="pic of juicy burger">
+  </div>
+  <div>
+    <img class="image" src="assets/img/insta5.png" alt="pic of juicy burger">
+  </div>
+  <div>
+    <img class="image" src="assets/img/insta6.png" alt="pic of juicy burger">
+  </div>
+  <div>
+    <img class="image" src="assets/img/insta7.png" alt="pic of juicy burger">
+  </div>
+  <div>
+    <img class="image" src="assets/img/insta8.png" alt="pic of juicy burger">
+  </div>
+</div>
 </div>
 
-<div class="container">
+<div class= "our-story container">
+  <h1>Our Story</h1>
   <img src="assets/img/brandon.jpg" alt="brandon">
   <div>
-    <h1>Our Story</h1>
     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-    <a class="waves-effect waves-light btn">Learn More</a>
   </div>
 </div>
 </main>
+
 <footer class="page-footer">
           <div class="container">
             <div class="row">

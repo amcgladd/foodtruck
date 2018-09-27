@@ -4,6 +4,9 @@
     @content;
   }
 }
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: 'Montserrat', sans-serif;
@@ -16,7 +19,9 @@ html {
   display: none;
 }
 
-nav {
+#navbar {
+  min-width: 300px;
+  height: 130px;
   .navmobile {
   }
   .nav-logo{
@@ -26,12 +31,22 @@ nav {
   }
   @include for-phone-only {
     .nav-mobile {
-      display: inline;
+      // display: flex;
+      // justify-content: center;
+      display: block;
+      position: relative;
       #nav-burger {
         padding-top: 30px;
         float: left;
         vertical-align: middle;
-        height: 40px;
+        height: 60px;
+      } #nav-logo-mobile {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50px;
+        height: 100px;
+        width: auto;
       }
     }
     // border: 5px solid green;
@@ -75,7 +90,7 @@ nav {
   flex-shrink: 0;
 }
 
-.welcome-box {
+.carousel {
     height: 600px;
     overflow: hidden;
     display: flex;
@@ -87,24 +102,53 @@ nav {
   }
 }
 
-// @media screen and (max-width: 950px) {
-//   .welcome-box{
-//     height: 500px;
-//     align-items: center;
-//   }
-// }
+iframe {
+  width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  .welcome-box{
+    height: 500px;
+    align-items: center;
+  }
+}
+
+
 
 .schedule-box {
   margin-bottom: 50px;
 #schedule-header {
   margin-top: 50px;
   margin-bottom: 50px;
-}
+  }
 }
 
+.schedule-section {
+  margin: 10px 0px;
+  display: flex;
+  .schedule-date {
+    padding: 10px;
+    background-color: #DA6727;
+    color: white;
+    .schedule-day {
+      font-size: 1.5rem;
+    }
+  }
+  .schedule-info {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 20px;
+    & > div:first-child{
+      font-size: 1.4rem;
+    }
+    & > div:nth-child(2){
+      font-style: italic;
+    }
+  }
+}
 
 .menu-pic {
-  height: 300px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -116,12 +160,48 @@ nav {
   }
 }
 
-
-.social {
-  background-color: grey;
-  overflow: hidden;
-  img {
-    width:100%;
-    height: auto;
+.menu-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  .menu-first-line {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
+}
+
+// .social {
+//   background-color: grey;
+//   overflow: hidden;
+//   .image {
+//     width: 100%;
+//     height: 33%;
+//   }
+// }
+.flex-box-bg {
+  background-color: black;
+  width:100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.our-story {
+  // margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: black !important;
 }
