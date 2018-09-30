@@ -187,13 +187,21 @@ iframe {
   margin-bottom: 20px;
   position: relative;
   #our-story-title {
+    color: #DA6727;
     z-index: 1;
     font-size: 8rem;
     white-space: nowrap;
     position: relative;
   }
-  #our-story-pic {
+  #story-pic {
     z-index:0;
+  }
+  @include for-phone-only {
+    #our-story-title {
+      font-size: 4rem;
+    } #story-pic {
+      width: 100%;
+    }
   }
 }
 
